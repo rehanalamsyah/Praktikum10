@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAKTIKUM 10 - Kurs Kalkulator</title>
+    <style>
+        body{
+            font-family: monospace;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            margin: 50px 350px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "orange";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+        
+        function imagepicker() {
+            const list_image = ["petrik.webp", "widwod.png", "pongbob.png", "geri.webp", "plengton.webp", "kreb.png"]
+            let pilihan = document.getElementById("option");
+            if(pilihan.value == "petrik") {
+                let select = list_image[0];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar petrik")
+            }
+            
+
+            if(pilihan.value == "Widwod") {
+                let select = list_image[1];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar Widwod.png")
+            }
+
+            if(pilihan.value == "Pongbob") {
+                let select = list_image[2];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar Pongbob.png")
+            }
+
+            if(pilihan.value == "Geri") {
+                let select = list_image[3];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar geri.png")
+            }
+
+            if(pilihan.value == "Plengton") {
+                let select = list_image[4];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar plengton.png")
+            }
+
+            if(pilihan.value == "Tuan Kreb") {
+                let select = list_image[5];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar Tuan Kreb.png")
+            }
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to Rehan Alamsyah Putra Image Picker</h1></a>
+    <hr>
+    <br>
+    <select id="option" onchange="imagepicker()">
+        <option value="" selected>Pilih Gambar</option>
+        <option value="petrik">Petrik</option>
+        <option value="Widwod">Squidwod</option>
+        <option value="Pongbob">Pongbob</option>
+        <option value="Geri">Geri</option>
+        <option value="Plengton">Plengton</option>
+        <option value="Tuan Kreb">Tuan Kreb</option>
+    </select>
+    <br>
+    <div class="container" id="container">
+        <div class="box" id="box">
+            <img id="image">
+        </div>
+    </div>
+
+
+</body>
+</html>
